@@ -7,4 +7,36 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'pildoras';
+
+  nombre: String = "Ariel";
+  apellido: String = "Ledezma";
+  edad: number = 15;
+
+  textoRegistro: String = "No hay nadie registrado";
+
+  /* Property Binding */
+  valorProperty: boolean = true;
+
+  userRegister = false;
+
+  getRegisterUser(){
+
+    this.userRegister = false;
+  }
+
+
+  /* Event Binding */
+
+  setUserRegister(event: Event){
+    //alert("El usuario se ha registrado");
+    //this.textoRegistro = "El usuario se acaba de registrar";
+    if((<HTMLInputElement>event.target).value== "si"){
+      this.textoRegistro = "El usuario se aca de registrar";
+    }else{
+      this.textoRegistro = "No hay nadie registrado";
+    }
+  }
+
+
+
 }
