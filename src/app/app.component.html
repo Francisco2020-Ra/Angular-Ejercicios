@@ -4,10 +4,17 @@
 
 <p>Edad del empleado: {{ edad<18 ? "Es menor de edad" : "Es mayor de edad" }}</p>
 
-<p>Empresa del empleado. {{ empresa.value }}</p>
+
+<!--  <p>Empresa del empleado. {{ empresa.value }}</p>  lo usamos en property binding-->
+
+<p>Empresa del empleado: {{ empresa }}</p>
 
 <!-- hay una property binding en disabled = false, se remplazo por [disabled] = valor, valor se toma desde el componente-->
-Introduce la empresa: <input type="text" #empresa (keyup)="0" [disabled] = "valorProperty"/>
+<!--Introduce la empresa: <input type="text" #empresa (keyup)="0" [disabled] = "valorProperty"/>-->
+
+
+Introduce la empresa: <input type="text" [(ngModel)]="empresa"/>
+
 
 <br/>
 <br/>

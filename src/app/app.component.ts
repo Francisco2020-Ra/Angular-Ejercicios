@@ -15,13 +15,13 @@ export class AppComponent {
   textoRegistro: String = "No hay nadie registrado";
 
   /* Property Binding */
-  valorProperty: boolean = true;
+  valorProperty: boolean = false;
 
   userRegister = false;
 
   getRegisterUser(){
 
-    this.userRegister = false;
+    this.userRegister = true;
   }
 
 
@@ -37,6 +37,9 @@ export class AppComponent {
     }
   }
 
+  /* Two Way Binding */
 
+
+  empresa: String = "Google";
 
 }
